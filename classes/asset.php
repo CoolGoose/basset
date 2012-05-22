@@ -123,7 +123,7 @@ class Asset {
             }
 		}
 
-		$contents = @file_get_contents($this->file);
+		$contents = @file_get_contents($this->source . DS . $this->file);
 
 		if($this->group == 'styles')
 		{
@@ -189,8 +189,6 @@ class Asset {
 			{
 				return false;
 			}
-
-			$this->file = $this->source . DS . $this->file;
 		}
 		else
 		{
